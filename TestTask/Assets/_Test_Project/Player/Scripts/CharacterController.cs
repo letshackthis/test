@@ -1,3 +1,4 @@
+using _Test_Project.Tools.Scripts;
 using UnityEngine;
 using UnityEngine.AI;
 using UnityEngine.EventSystems;
@@ -24,7 +25,7 @@ namespace _Test_Project.Player.Scripts
 
         void Update()
         {
-            if (!EventSystem.current.IsPointerOverGameObject())
+            if (!DetectUIClick.IsPointerOverGameObject())
             {
                 if (Input.GetMouseButtonDown(0) && CheckTargetPosition() || transform.position != _target)
                 {
